@@ -1,0 +1,1 @@
+export const WIX_CLIENT_ID = "1f352b34-22e5-4b00-81b1-662f43a98478";
