@@ -72,6 +72,7 @@ function mount(root, n) {
   }
   function render(s) {
     if (s.outcome) {
+      if (!root.dataset.sent) { root.dataset.sent = "1"; document.dispatchEvent(new CustomEvent("vhg:form-sent", { detail: { formId: root.dataset.formId } })); }
       if (s.outcome.url) { location.href = s.outcome.url; return; }
       var msg = s.outcome.message || "Thank you. We got it.";
       root.innerHTML = '<div class="thanks" role="status" tabindex="-1">' + msg.split("\n").map(esc).join("<br>") + "</div>";
