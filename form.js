@@ -72,6 +72,7 @@ function mount(root, n) {
   }
   function render(s) {
     if (s.outcome) {
+      if (window.vhgAds) window.vhgAds.convert("form");
       if (s.outcome.url) { location.href = s.outcome.url; return; }
       var msg = s.outcome.message || "Thank you. We got it.";
       root.innerHTML = '<div class="thanks" role="status" tabindex="-1">' + msg.split("\n").map(esc).join("<br>") + "</div>";
