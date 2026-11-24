@@ -112,3 +112,10 @@ footer.site h2{color:#fff;font-size:19px}
 .impact li{display:flex;flex-direction:column;min-width:150px}
 .impact strong{font:700 28px/1.1 Georgia,serif;color:var(--gold)}
 .impact span{font-size:15px;color:#e3eaed}
+
+/* Giving Tuesday 2026 announcement bar (added Nov 24, 2026) */
+.announce{background:var(--gold);color:var(--navy);font-size:16px;line-height:1.45}
+.announce p{max-width:1160px;margin:0 auto;padding:10px 24px}
+.announce a{color:var(--navy);font-weight:700;text-underline-offset:3px}
+@media(max-width:820px){.announce p{padding:10px 16px}}
+@media print{.announce{display:none}}
